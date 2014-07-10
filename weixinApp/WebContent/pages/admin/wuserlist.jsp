@@ -25,7 +25,16 @@
 		function checkData(groupId){
 			top.document.getElementById("mainFrame").src="<%=basePath%>user/getUserByGroup.action?group.groupid="+groupId;
 		}
-	
+		
+		function addGroup(){
+			var subGroupWin = window.showModalDialog("/pages/admin/wuserGroupAdd.jsp","增加用户分组","dialogWidth:400px;dialogHeight:280px;dialogLeft:200px;center:yes;help:no;resizable:no;status:no;scroll=no");
+			subGroupWin.onunload(dorload());
+		}
+		function dorload(){
+			alert(1);
+			top.document.getElementById("mainFrame").src="<%=basePath%>user/getWuserList.action";
+
+		}
 	</script>
 	</head>
 	<body>
@@ -90,26 +99,24 @@
 				<tr>
 					<td colspan="4" style="width: 100%"><hr/></td>
 				</tr>
-				<tr>
+				<%-- <tr>
 					<td width="15%" align="center" valign="middle">
 						全部用户（${fn:length(UserList)}）
 					</td>
-				</tr>
+				</tr> --%>
 				<s:iterator value="#request.groupList" var="grp" status="statu">
 					 
 				<tr style="text-align: center;">
 					<td onclick="checkData('${grp.id}');">${grp.name}（${grp.count }）</td>
 				</tr>
 				</s:iterator>
-				
+				<tr>
+					<td width="15%" align="center" valign="middle">
+						<a href="javascript:void(0);" onclick="addGroup()">+创建新分组</a>
+					</td>
+				</tr>
 			</table>
-		
 		</div>
-		
-		
-		
-		<br>
-		<br>
 	</body>
 </html>
 
