@@ -53,7 +53,7 @@ public class CoreService {
             String toUserName = requestMap.get("ToUserName");  
             // 消息类型  
             String msgType = requestMap.get("MsgType");  
-            //消息内容
+            //消息内容1
            String msgContent = requestMap.get("Content");
            //自定义菜单推送的key
            String EventKey = requestMap.get("EventKey");
