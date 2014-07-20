@@ -10,6 +10,7 @@ import com.csst.business.dao.TestDao;
 import com.csst.business.model.BUser;
 import com.csst.business.model.TTrUser;
 import com.csst.business.model.TUserMenu;
+import com.csst.business.model.TWgroup;
 import com.csst.business.model.TWuser;
 
 public class UserDaoImpl extends BaseDaoImpl implements IUserDao {
@@ -37,6 +38,8 @@ public class UserDaoImpl extends BaseDaoImpl implements IUserDao {
 	@Override
 	public void AddorUpdateUser(TWuser twuser) {
 		Session session=getSessionFactory().getCurrentSession();
+		TWgroup twgrop = twuser.getTWgroup();
+		session.saveOrUpdate(twgrop);
 		session.saveOrUpdate(twuser);
 		session.flush();
 		session.close();

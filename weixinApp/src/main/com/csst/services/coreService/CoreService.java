@@ -8,7 +8,11 @@ import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
+
+import org.springframework.web.context.WebApplicationContext;
+import org.springframework.web.context.support.WebApplicationContextUtils;
 
 import net.sf.json.JSONObject;
 
@@ -110,6 +114,7 @@ public class CoreService {
             }  
             // 地理位置消息  
             else if (msgType.equals(MessageUtil.REQ_MESSAGE_TYPE_LOCATION)) {  
+            	System.out.println("获取用户地理信息了！");
             	String location_x = requestMap.get("Location_X");
             	String location_y = requestMap.get("Location_Y");
             	String scale = requestMap.get("Scale");
@@ -136,14 +141,27 @@ public class CoreService {
                 // 订阅  
                 if (eventType.equals(MessageUtil.EVENT_TYPE_SUBSCRIBE)) {  
                 	 Common com = new Common();
-                	UserAction useraction = new UserAction();
-                	useraction.AddorUpdateUser(fromUserName);
+                	 //关注获取用户信息：
+                	/* ServletContext servletContext = request.getSession().getServletContext();      
+                	 WebApplicationContext wac = null;       
+                	 wac = WebApplicationContextUtils.getRequiredWebApplicationContext(servletContext);      
+                	 UserAction useraction  = (UserAction) wac.getBean("userAction");
+                	 useraction.AddorUpdateUser(fromUserName);*/
+                	 
                      XMLNewsMessage xmlnewMessage = new XMLNewsMessage(fromUserName,toUserName , com.getWelcomPage());
                      return xmlnewMessage.toXML();
                 }  
                 // 取消订阅  
                 else if (eventType.equals(MessageUtil.EVENT_TYPE_UNSUBSCRIBE)) {  
                     // TODO 取消订阅后用户再收不到公众号发送的消息，因此不需要回复消息  
+                }  
+                else if (eventType.equalsIgnoreCase(MessageUtil.REQ_MESSAGE_TYPE_LOCATION)) {  
+                	System.out.println("获取用户地理信息了~~~====================================");
+                	String location_x = requestMap.get("Latitude");
+                	String location_y = requestMap.get("Longitude");
+                	String location_Precision = requestMap.get("Precision");
+                	respContent = "您当前坐标：\nx:"+location_x+",\ny:"+location_y+",\n精度:"+location_Precision;
+                	// TODO 取消订阅后用户再收不到公众号发送的消息，因此不需要回复消息  
                 }  
                 // 自定义菜单点击事件  
                 else if (eventType.equals(MessageUtil.EVENT_TYPE_CLICK)) {  
