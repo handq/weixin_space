@@ -89,11 +89,19 @@ public class UserMenuDaoImpl extends BaseDaoImpl implements IUserMenuDao {
 					 Button but[] = new Button[tlist.size()];
 					 for(int m=0;m<tlist.size();m++){
 						 TUserMenu smenu = tlist.get(m);
-						 CommonButton btn = new CommonButton();
-						 btn.setKey(smenu.getUsermenuCode());
-						 btn.setName(smenu.getUsermenuName());
-						 btn.setType("click");
-						 but[m]=btn;
+						 if(smenu.getUsermenuType().equalsIgnoreCase("view")){
+							 ViewButton mainviewbtn = new ViewButton();  
+							 mainviewbtn.setName(smenu.getUsermenuName());  
+							 mainviewbtn.setType("view");  
+							 mainviewbtn.setUrl(smenu.getUsermenuLink());
+							 but[m]=mainviewbtn;
+						 }else{
+							 CommonButton btn = new CommonButton();
+							 btn.setKey(smenu.getUsermenuCode());
+							 btn.setName(smenu.getUsermenuName());
+							 btn.setType("click");
+							 but[m]=btn;
+						 }
 					 }
 					 mainBtn.setSub_button(but);
 					 tbut[tmenu.getUsermenuNo()-1] = mainBtn;
