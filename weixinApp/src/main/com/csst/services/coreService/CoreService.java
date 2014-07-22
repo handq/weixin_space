@@ -70,13 +70,15 @@ public class CoreService {
             	}else if("5".equalsIgnoreCase(msgContent)){
             		respContent = "只要发送您的一段语音，我就可以识别出您说的是什么，神奇吧，快来发送语音消息试试看吧~";
             	}else if("6".equalsIgnoreCase(msgContent)){
-            		respContent = "<a href='http://hdq.nat123.net/bootstrapDemo/theme.html'>官网</a>";
+            		respContent = "<a href='http://hdq.nat123.net/bootTest/003.html'>微官网</a>";
             	}else if("7".equalsIgnoreCase(msgContent)){
-            		respContent = "<a href='http://hdq.nat123.net/user/main.html'>餐饮预订</a>";
+            		respContent = "<a href='http://hdq.nat123.net/bootTest/002.html'>在线预约</a>";
             	}else if("8".equalsIgnoreCase(msgContent)){
-            		respContent = "<a href='http://hdq.nat123.net/user/main.html'>在线预约</a>";
-            	}else if("？".equalsIgnoreCase(msgContent) || "?".equalsIgnoreCase(msgContent)){
-            		respContent =""+ getMainMenu();
+            		respContent = "<a href='http://hdq.nat123.net/bootTest/005.html'>查看预约</a>";
+            	}else if("9".equalsIgnoreCase(msgContent)){
+	        		respContent = "<a href='http://hdq.nat123.net/bootTest/004.html'>公司简介</a>";
+	        	}else if("？".equalsIgnoreCase(msgContent) || "?".equalsIgnoreCase(msgContent)){
+	            		respContent =""+ getMainMenu();
             	}else if("@".equalsIgnoreCase(msgContent)){
                     Common com = new Common();
                     XMLNewsMessage xmlnewMessage = new XMLNewsMessage(fromUserName, toUserName, com.getWelcomPage());
@@ -136,10 +138,11 @@ public class CoreService {
                 // 订阅  
                 if (eventType.equals(MessageUtil.EVENT_TYPE_SUBSCRIBE)) {  
                 	 Common com = new Common();
-                	UserAction useraction = new UserAction();
+                /*	UserAction useraction = new UserAction();
                 	useraction.AddorUpdateUser(fromUserName);
-                     XMLNewsMessage xmlnewMessage = new XMLNewsMessage(fromUserName,toUserName , com.getWelcomPage());
-                     return xmlnewMessage.toXML();
+                     XMLNewsMessage xmlnewMessage = new XMLNewsMessage(fromUserName,toUserName , com.getWelcomPage());*/
+                    /* return xmlnewMessage.toXML();*/
+                	 respContent = getMainMenu();
                 }  
                 // 取消订阅  
                 else if (eventType.equals(MessageUtil.EVENT_TYPE_UNSUBSCRIBE)) {  
@@ -183,8 +186,8 @@ public class CoreService {
         buffer.append("4  公交查询 \ue159").append("\n");  
         buffer.append("5  语音识别").append("\n");  
         buffer.append("6  微官网").append("\n");  
-        buffer.append("7  餐饮预订").append("\n");  
-        buffer.append("8  在线预约 \ue428").append("\n");  
+        buffer.append("7  在线预约").append("\n");  
+        buffer.append("8  查看预约\ue428").append("\n");  
         buffer.append("9  酒店简介").append("\n");  
         buffer.append("10  酒店印象").append("\n");  
         buffer.append("11  联系方式").append("\n");  
