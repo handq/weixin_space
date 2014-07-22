@@ -43,7 +43,7 @@ public class CoreService {
      */  
     public static String processRequest(HttpServletRequest request) throws Exception {  
         String respMessage = null;  
-            // 默认返回的文本消息内容   
+            // 默认返回的文本消息内容测色测试
             String respContent = "目前正在测试中，暂时不能使用~";  
             // xml请求解析  
             Map<String, String> requestMap = MessageUtil.parseXml(request);  
