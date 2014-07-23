@@ -64,7 +64,7 @@ public class CoreService {
             	}else if("2".equalsIgnoreCase(msgContent)){
             		respContent = "您选择了位置服务，请点击右下角的'+',打开快捷菜单，点击发送位置。";
             	}else if("3".equalsIgnoreCase(msgContent)){
-            		respContent = "<a href='http://hdq.nat123.net/user/main.jsp'>测试页面</a>";
+            		respContent = "<a href='http://hdq.nat123.net/bootTest/008.html'>测试页面</a>";
             	}else if("4".equalsIgnoreCase(msgContent)){
             		respContent = "您选择了公交查询，回复公交+城市名+','+公交线路，例如：公交北京58";
             	}else if("5".equalsIgnoreCase(msgContent)){
