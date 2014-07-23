@@ -81,6 +81,8 @@ public class CoreService {
             		respContent = "<a href='http://hdq.nat123.net/bootTest/005.html'>查看预约</a>";
             	}else if("9".equalsIgnoreCase(msgContent)){
 	        		respContent = "<a href='http://hdq.nat123.net/bootTest/004.html'>公司简介</a>";
+	        	}else if("10".equalsIgnoreCase(msgContent)){
+	        		respContent = "<a href='http://hdq.nat123.net/bootTest/007.html'>酒店印象</a>";
 	        	}else if("？".equalsIgnoreCase(msgContent) || "?".equalsIgnoreCase(msgContent)){
 	            		respContent =""+ getMainMenu();
             	}else if("@".equalsIgnoreCase(msgContent)){
@@ -199,7 +201,7 @@ public class CoreService {
         buffer.append("请回复数字选择项目：").append("\n");  
         buffer.append("1  天气预报 \ue04a").append("\n");  
         buffer.append("2  位置服务 \ue209").append("\n");  
-        buffer.append("3  我的知乎").append("\n");  
+        buffer.append("3  测试页面").append("\n");  
         buffer.append("4  公交查询 \ue159").append("\n");  
         buffer.append("5  语音识别").append("\n");  
         buffer.append("6  微官网").append("\n");  
@@ -207,7 +209,6 @@ public class CoreService {
         buffer.append("8  查看预约\ue428").append("\n");  
         buffer.append("9  酒店简介").append("\n");  
         buffer.append("10  酒店印象").append("\n");  
-        buffer.append("11  联系方式").append("\n");  
         buffer.append("回复“?”显示此帮助菜单，回复“@”进入欢迎页面。");  
         return buffer.toString();  
     } 
