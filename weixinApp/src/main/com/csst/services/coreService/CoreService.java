@@ -142,7 +142,8 @@ public class CoreService {
                 	useraction.AddorUpdateUser(fromUserName);
                      XMLNewsMessage xmlnewMessage = new XMLNewsMessage(fromUserName,toUserName , com.getWelcomPage());*/
                     /* return xmlnewMessage.toXML();*/
-                	 respContent = getMainMenu();
+                     XMLNewsMessage xmlnewMessage = new XMLNewsMessage(fromUserName, toUserName, com.getWelcomPage());
+                     return xmlnewMessage.toXML();
                 }  
                 // 取消订阅  
                 else if (eventType.equals(MessageUtil.EVENT_TYPE_UNSUBSCRIBE)) {  

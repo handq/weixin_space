@@ -34,7 +34,7 @@ public class Common {
     	 article.setTitle("我是哆啦A梦");
     	 article.setDescription("");
     	 article.setPicurl("http://pic.159.com/desk/user/2012/5/2/Jiker20124321421915.jpg");
-    	 article.setUrl("http://hdq.nat123.net/bootstrapDemo/index.html");
+    	 article.setUrl("http://hdq.nat123.net/bootTest/003.html");
     	 articls.add(article);
     	 Article article2 = new Article();
     	 article2.setTitle("我会提供很多便利的服务哦~\n您可以回复?查看服务清单.");
