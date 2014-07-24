@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -6,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="http://v3.bootcss.com/favicon.ico">
-    <title>在线预约</title>
+    <title>留言板</title>
     <link href="/bootstrapDemo/bootstrap/css/bootstrap.css" rel="stylesheet">
     <link href="/bootstrapDemo/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
     <script src="/bootstrapDemo/js/jquery.js"></script>
@@ -119,10 +121,7 @@
 				<small style="color: gray;">点击加载更多...</small>
 			</div>
 		</div>
-		
 		<p class="text-center" style="margin-top: 10px;">技术支持：北京环球科技</p>
-		 
-    
 </div>
 </body>
 </html>

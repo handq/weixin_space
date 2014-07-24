@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -6,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="http://v3.bootcss.com/favicon.ico">
-    <title>关于我们</title>
+    <title>微官网</title>
     <link href="/bootstrapDemo/bootstrap/css/bootstrap.css" rel="stylesheet">
     <link href="/bootstrapDemo/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
     <script src="/bootstrapDemo/js/jquery.js"></script>
@@ -84,29 +86,67 @@
           <span class="glyphicon glyphicon-chevron-right"></span>
         </a>
       </div>
-      
 	<!-- 这里是头部的轮播插件 end-->
-	<div class="container" style="margin: 5px; padding: 5px;" >
-		<div class="panel panel-default">
-		  <div class="panel-heading">环球科技简介</div>
-		  <div class="panel-body">
-		  <img src="http://user.china-dirs.cn/k029/user051/uploadfile/20100728141457771.jpg" class="img-rounded" width="100%">
-		  <p>
-		  公司成立于1992年，距今已有20年的历程，是一家专业大型餐饮企业。公司总资产9000多万元，现有员工500余人，专用餐饮车几十辆。公司总部设在朝阳区望京开发区东北部，占地面积近万平方米，已形成了规模化、规范化的现代快餐加工基地和办公区域。
-		  </p>
-		  </div>
-		</div>
-	<p class="text-center" style="margin-top: 10px;">技术支持：北京环球科技</p>
+<div class="container" style="padding: 5px;">	
+	<a href="#"><img src="/images/64png/8.png" class="img-circle" style="margin-left: 5px;" >  </a>
+	<a href="#"><img src="/images/64png/315.png" class="img-circle" style="margin-left: 5px;">  </a>
+	<a href="#"><img src="/images/64png/461.png" class="img-circle" style="margin-left: 5px;"> </a> 
+	<a href="#"><img src="/images/64png/594.png" class="img-circle" style="margin-left: 5px;">  </a>
+	
+	 <div class="row-fluid" >
+		 <div class="span2" style="padding: 5px;" >
+		   <!--   <blockquote class="pull-left" style="margin: 0px;padding: 0px;">
+			  <p>公司新闻</p>
+			  <small style="font-size: 13px;"><a>7月21日，公司举办十周年庆活动，全体员工</a></normal>
+			  <small style="font-size: 13px;"><a>7月21日，公司举办十周年庆活动，全体员工</a></small>
+			  <small style="font-size: 13px;"><a>7月21日，公司举办十周年庆活动，全体员工</a></small>
+			  <small style="font-size: 13px;"><a>7月21日，公司举办十周年庆活动，全体员工</a></small>
+			</blockquote> -->
+			<h4  style="color: black;border-bottom: 1px black solid;">公告</h4>
+			<small style="font-size: 13px;">经公司领导班子研究决定，新进公司的员工，一年转正定级后，公司给统一办理缴纳社保。现在由员工自己缴纳社保，缴费收据上交到公司人事部门。为保证员工的合法权益，公司将以现金的形式给予补偿，每月每人补人民币180元，体现在个人的工资里。此规定从2010年6月1日起执行。</small>
+			<h4 style="color: black;border-bottom: 1px black solid;">公司新闻</h4>
+			
+			<table class="table table-hover">
+			 	<tr onclick="location.href='/bootTest/008.html'">
+			 		<td>1</td>
+			 		<td>7月21日，公司举办十周年庆活动，全体</td>
+			 	</tr>
+			 	<tr onclick="location.href='/bootTest/008.html'">
+			 		<td>2</td>
+			 		<td>7月21日，公司举办十周年庆活动，全体</td>
+			 	</tr>
+			 	<tr onclick="location.href='/bootTest/008.html'">
+			 		<td>3</td>
+			 		<td>7月21日，公司举办十周年庆活动，全体</td>
+			 	</tr>
+			  </table>
+			 <h4 style="color: black;border-bottom: 1px black solid;">联系我们</h4>
+			 <div>
+			 <p>名称：北京实创餐饮管理有限公司</p>
+			 <p>联系电话：010-391341</p>
+			 <p>邮箱：hx-jfkl@hx.mail.com</p>
+			 <p>地址：北京市西直门内大街118号</p>
+			
+			 </div>
+	     	 <h4 style="color: black;border-bottom: 1px black solid;"> 版权信息</h4>
+	     	 <p class="text-center">版权所有 2004-2007,-SHOP 因特网信息服务业务经营许可证号：京ICP证01023944号</p>
+	    </div>
+	    <div class="span10" >
+	      <!-- <h4>关于我们</h4>
+	      <h4>版权信息</h4> -->
+	    </div>
 	</div>
-		<div style="height: 30px;"></div>
+	<div style="height: 30px;"></div>
 	<!-- 这里是固定在底部的导航条 start-->
+	
      <div class="bottom" style="background-color: black;">
 		<span class="style4" style="color: red;height: 24px;padding-top: 5px;">
-		<button type="button" class="btn btn-default" style="width: 30%"  style="width: 30%" onclick="location.href='/bootTest/003.html'">微官网</button>
-	  	<button type="button" class="btn btn-default" style="width: 30%" onclick="location.href='/bootTest/002.html'">在线预约</button>
+		<button type="button" class="btn btn-default" style="width: 30%" onclick="location.href='/bootTest/002.html'">在线预约</button>
 	  	<button type="button" class="btn btn-default" style="width: 30%" onclick="location.href='/bootTest/005.html'">查看预约</button>
+	  	<button type="button" class="btn btn-default" style="width: 30%" onclick="location.href='/bootTest/004.html'">关于我们</button>
 		</span><br />
 	</div>
 	<!-- 这里是固定在底部的导航条 end-->
+</div>
 </body>
 </html>

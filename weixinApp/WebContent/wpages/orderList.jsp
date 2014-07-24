@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -13,7 +15,6 @@
  	<script src="/bootstrapDemo/bootstrap/js/bootstrap.min.js"></script>
  	<script src="/bootTest/js/my.js"></script>
     <style type="text/css">
-    
     	.bottom
 	{
 		position:fixed;
