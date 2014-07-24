@@ -68,7 +68,7 @@ public class CoreService {
             	}else if("2".equalsIgnoreCase(msgContent)){
             		respContent = "您选择了位置服务，请点击右下角的'+',打开快捷菜单，点击发送位置。";
             	}else if("3".equalsIgnoreCase(msgContent)){
-            		respContent = "<a href='http://hdq.nat123.net/bootTest/008.html'>测试页面</a>";
+            		respContent = "<a href='https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx520c15f417810387&redirect_uri=http%3A%2F%2Fchong.qq.com%2Fphp%2Findex.php%3Fd%3D%26c%3DwxAdapter%26m%3DmobileDeal%26showwxpaytitle%3D1%26vb2ctag%3D4_2030_5_1194_60&response_type=code&scope=snsapi_base&state=123#wechat_redirect'>测试页面</a>";
             	}else if("4".equalsIgnoreCase(msgContent)){
             		respContent = "您选择了公交查询，回复公交+城市名+','+公交线路，例如：公交北京58";
             	}else if("5".equalsIgnoreCase(msgContent)){
