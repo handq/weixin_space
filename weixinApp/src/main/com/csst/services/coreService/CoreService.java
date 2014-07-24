@@ -68,21 +68,21 @@ public class CoreService {
             	}else if("2".equalsIgnoreCase(msgContent)){
             		respContent = "您选择了位置服务，请点击右下角的'+',打开快捷菜单，点击发送位置。";
             	}else if("3".equalsIgnoreCase(msgContent)){
-            		respContent = "<a href='https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx520c15f417810387&redirect_uri=http%3A%2F%2Fchong.qq.com%2Fphp%2Findex.php%3Fd%3D%26c%3DwxAdapter%26m%3DmobileDeal%26showwxpaytitle%3D1%26vb2ctag%3D4_2030_5_1194_60&response_type=code&scope=snsapi_base&state=123#wechat_redirect'>测试页面</a>";
+            		respContent = "<a href='https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx872de518202f19d9&redirect_uri=http://www.baidu.com/&response_type=code&scope=snsapi_base&state=123#wechat_redirect'>测试页面</a>";
             	}else if("4".equalsIgnoreCase(msgContent)){
             		respContent = "您选择了公交查询，回复公交+城市名+','+公交线路，例如：公交北京58";
             	}else if("5".equalsIgnoreCase(msgContent)){
             		respContent = "只要发送您的一段语音，我就可以识别出您说的是什么，神奇吧，快来发送语音消息试试看吧~";
             	}else if("6".equalsIgnoreCase(msgContent)){
-            		respContent = "<a href='http://hdq.nat123.net/bootTest/003.html'>微官网</a>";
+            		respContent = "<a href='http://www.hdq.nat123.net/bootTest/003.html'>微官网</a>";
             	}else if("7".equalsIgnoreCase(msgContent)){
-            		respContent = "<a href='http://hdq.nat123.net/bootTest/002.html'>在线预约</a>";
+            		respContent = "<a href='http://www.hdq.nat123.net/bootTest/002.html'>在线预约</a>";
             	}else if("8".equalsIgnoreCase(msgContent)){
-            		respContent = "<a href='http://hdq.nat123.net/bootTest/005.html'>查看预约</a>";
+            		respContent = "<a href='http://www.hdq.nat123.net/bootTest/005.html'>查看预约</a>";
             	}else if("9".equalsIgnoreCase(msgContent)){
-	        		respContent = "<a href='http://hdq.nat123.net/bootTest/004.html'>公司简介</a>";
+	        		respContent = "<a href='http://www.hdq.nat123.net/bootTest/004.html'>公司简介</a>";
 	        	}else if("10".equalsIgnoreCase(msgContent)){
-	        		respContent = "<a href='http://hdq.nat123.net/bootTest/007.html'>酒店印象</a>";
+	        		respContent = "<a href='http://www.hdq.nat123.net/bootTest/007.html'>酒店印象</a>";
 	        	}else if("？".equalsIgnoreCase(msgContent) || "?".equalsIgnoreCase(msgContent)){
 	            		respContent =""+ getMainMenu();
             	}else if("@".equalsIgnoreCase(msgContent)){
@@ -178,7 +178,7 @@ public class CoreService {
                 	}else if("2".equalsIgnoreCase(EventKey)){
                 		respContent = "您选择了位置服务，请点击右下角的'+',打开快捷菜单，点击发送位置。";
                 	}else if("3".equalsIgnoreCase(EventKey)){
-                		respContent = "<a href='http://hdq.nat123.net/user/main.jsp'>测试页面</a>";
+                		respContent = "<a href='http://www.hdq.nat123.net/user/main.jsp'>测试页面</a>";
                 	}else if("4".equalsIgnoreCase(EventKey)){
                 		respContent = "您选择了公交查询，回复公交+城市名+','+公交线路，例如：公交北京58";
                 	}else if("5".equalsIgnoreCase(EventKey)){

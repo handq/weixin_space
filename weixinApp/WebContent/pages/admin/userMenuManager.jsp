@@ -124,6 +124,10 @@
 						<a href="javascript:void(0)" onclick="toEdit('${ent.id}');">修改</a>
 						<a href="javascript:void(0)" onClick="delMenu('${ent.id}')">删除</a>
 					</s:elseif>
+					<s:elseif test="%{#ent.usermenuType=='common'}">
+						<a href="javascript:void(0)" onclick="toEdit('${ent.id}');">修改</a>
+						<a href="javascript:void(0)" onClick="delMenu('${ent.id}')">删除</a>
+					</s:elseif>
 					
 				</td>
 				</tr>
@@ -164,6 +168,7 @@
 											<a href="javascript:void(0)" onclick="toEdit('${ent2.id}');">修改</a>
 											<a href="javascript:void(0)" onClick="delMenu('${ent2.id}')">删除</a>
 										</s:elseif>
+										
 									</td>
 								</tr>
 						</s:if>

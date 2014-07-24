@@ -164,7 +164,7 @@ public class MenuManager {
     	ViewButton btn32 = new ViewButton();  
         btn32.setName("微官网");  
         btn32.setType("view");  
-        btn32.setUrl("http://hdq.nat123.net/bootstrapDemo/index.html");
+        btn32.setUrl("http://www.hdq.nat123.net/bootstrapDemo/index.html");
         
        /* ComplexButton mainBtn1 = new ComplexButton();  
         mainBtn1.setName("微官网");  */
