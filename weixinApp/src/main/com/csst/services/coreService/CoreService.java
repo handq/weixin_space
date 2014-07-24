@@ -68,7 +68,7 @@ public class CoreService {
             	}else if("2".equalsIgnoreCase(msgContent)){
             		respContent = "您选择了位置服务，请点击右下角的'+',打开快捷菜单，点击发送位置。";
             	}else if("3".equalsIgnoreCase(msgContent)){
-            		String encodeURI= java.net.URLEncoder.encode("http://www.hdq.nat123.net/OAuthServlet?opentype=test","utf-8");
+            		String encodeURI= java.net.URLEncoder.encode("http://www.hdq.nat123.net/company/getOrderListPage.action","utf-8");
             		//respContent = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx872de518202f19d9&redirect_uri=http://www.hdq.nat123.net/wpages/whome.jsp&response_type=code&scope=snsapi_userinfo&state=123#wechat_redirect";
             		respContent = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx872de518202f19d9&redirect_uri="+encodeURI+"&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect";
             		//respContent = "http://www.hdq.nat123.net/wpages/whome.jsp";

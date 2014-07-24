@@ -3,7 +3,9 @@
 
 <struts>
 	<package name="company" extends="struts-default" namespace="/company">
-
+		<global-results>  
+	        <result name="error">/errorOAuth.jsp</result>  
+	    </global-results>  
 		<action name="testAction"
 			 class="com.csst.business.action.CompanyAction" method="testAction">
 			<result name="bbb">
@@ -17,6 +19,36 @@
 			 class="com.csst.business.action.CompanyAction" method="getCompanyData">
 			<result name="company">
 				/pages/admin/comManager.jsp			
+			</result>
+		</action>
+		<action name="getAboutus"
+			 class="com.csst.business.action.CompanyAction" method="getAboutus">
+			<result name="waboutus">
+				/wpages/aboutUS.jsp			
+			</result>
+		</action>
+		<action name="getHomePage"
+			 class="com.csst.business.action.CompanyAction" method="getHomePage">
+			<result name="homePage">
+				/wpages/whome.jsp			
+			</result>
+		</action>
+		<action name="getOrderPage"
+			 class="com.csst.business.action.CompanyAction" method="getOrderPage">
+			<result name="orderPage">
+				/wpages/onlineOrder.jsp		
+			</result>
+		</action>
+		<action name="getMessagePage"
+			 class="com.csst.business.action.CompanyAction" method="getMessagePage">
+			<result name="messagePage">
+				/wpages/messageBoard.jsp		
+			</result>
+		</action>
+		<action name="getOrderListPage"
+			 class="com.csst.business.action.CompanyAction" method="getOrderListPage">
+			<result name="orderlistPage">
+				/wpages/orderList.jsp		
 			</result>
 		</action>
 		
