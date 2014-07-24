@@ -34,7 +34,19 @@ public class OAuthServlet extends HttpServlet {
 			String openId =stken.getOpenid();
 			User user = snsapi.userinfo(accessToken, openId, "zh_CN");
 			request.setAttribute("snsUserinfo", user);
-			request.getRequestDispatcher("/wpages/whome.jsp").forward(request, response);
+			if(opentype.equalsIgnoreCase("home")){
+				request.getRequestDispatcher("/wpages/whome.jsp").forward(request, response);
+			}else if(opentype.equalsIgnoreCase("order")){
+				request.getRequestDispatcher("/wpages/onlineOrder.jsp").forward(request, response);
+			}else if(opentype.equalsIgnoreCase("message")){
+				request.getRequestDispatcher("/wpages/messageBoard.jsp").forward(request, response);
+			}else if(opentype.equalsIgnoreCase("aboutus")){
+				request.getRequestDispatcher("/wpages/aboutUS.jsp").forward(request, response);
+			}else if(opentype.equalsIgnoreCase("orderlist")){
+				request.getRequestDispatcher("/wpages/orderList.jsp").forward(request, response);
+			}else{
+				request.getRequestDispatcher("/wpages/whome.jsp").forward(request, response);
+			}
 		}else{
 			request.getRequestDispatcher("errorOAuth.jsp").forward(request, response);
 		}
