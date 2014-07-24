@@ -1,5 +1,6 @@
 package com.csst.business.action;
 
+import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -17,6 +18,8 @@ import java.util.Map;
 import java.util.Set;
 
 import javax.print.attribute.HashAttributeSet;
+
+import org.apache.struts2.ServletActionContext;
 
 import com.csst.business.common.MD5Code;
 import com.csst.business.model.BUser;
@@ -46,7 +49,6 @@ public class UserAction extends ActionSupport{
 ;
 	
 	public String testAction(){
-		System.out.println("=============================");
 		return "bbb";
 	}
 	//登录验证
@@ -108,6 +110,9 @@ public class UserAction extends ActionSupport{
         List<GroupData> groupdatas = group.getGroups();
         for(GroupData gr:groupdatas){
         	groupList.add(gr);
+        	if(gumap.get(Integer.valueOf(gr.getId()))==null){
+        		gumap.put(Integer.valueOf(gr.getId()), null);
+        	}
         }
 		return "userManager";
 	}
@@ -115,7 +120,9 @@ public class UserAction extends ActionSupport{
 	//根据分组查找改组用户
 	public String getUserByGroup(){
 		UserList = new ArrayList<User>();
-		UserList.addAll(gumap.get(group.getGroupid()));
+		if(gumap.get(group.getGroupid())!=null){
+			UserList.addAll(gumap.get(group.getGroupid()));
+		}
 		groupList = new ArrayList<GroupData>();
 		//获取accessToken
 		String at = TokenThread.accessToken.getToken();
@@ -126,6 +133,23 @@ public class UserAction extends ActionSupport{
         	groupList.add(gr);
         }
 		return "userManager";
+	}
+	
+	public void addWuserGroup(){
+		//获取accessToken
+		boolean flag = false;
+		String at = TokenThread.accessToken.getToken();
+		UserAPI userapi = new UserAPI();
+		group = userapi.groupsCreate(at,group.getGroup().getName());
+		if(group.getGroup().getId()!=null){
+			flag= true;
+		}
+		try {
+			ServletActionContext.getResponse().getWriter().print(flag);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	//用户关注，更新用户信息到本地用户表
 	public void AddorUpdateUser(String fromUserName) { 

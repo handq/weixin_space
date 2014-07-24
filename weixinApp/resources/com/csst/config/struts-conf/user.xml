@@ -42,5 +42,8 @@
 		<action name="AddorUpdateUser"
 			 class="com.csst.business.action.UserAction" method="AddorUpdateUser">
 		</action>
+		<action name="addWuserGroup"
+			 class="com.csst.business.action.UserAction" method="addWuserGroup">
+		</action>
 	</package>
 </struts>
