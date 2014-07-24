@@ -8,6 +8,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>这个是404界面</h1>
+	<h1>授权失败！请重新尝试！</h1>
 </body>
 </html>

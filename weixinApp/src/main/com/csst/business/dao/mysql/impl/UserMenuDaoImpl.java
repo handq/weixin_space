@@ -1,5 +1,6 @@
 package com.csst.business.dao.mysql.impl;
 
+import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -23,6 +24,8 @@ import com.csst.services.pojo.Menu;
 import com.csst.services.pojo.ViewButton;
 
 public class UserMenuDaoImpl extends BaseDaoImpl implements IUserMenuDao {
+	
+	public  static  String snsURI="https://open.weixin.qq.com/connect/oauth2/authorize?appid="+TokenThread.appid+"&redirect_uri=user_uri&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect";
 
 	@Override
 	public TUserMenu saveUserMenu(TUserMenu usermenu) {
@@ -92,8 +95,15 @@ public class UserMenuDaoImpl extends BaseDaoImpl implements IUserMenuDao {
 						 if(smenu.getUsermenuType().equalsIgnoreCase("view")){
 							 ViewButton mainviewbtn = new ViewButton();  
 							 mainviewbtn.setName(smenu.getUsermenuName());  
-							 mainviewbtn.setType("view");  
-							 mainviewbtn.setUrl(smenu.getUsermenuLink());
+							 mainviewbtn.setType("view"); 
+							 String url = "";
+							 try {
+								 url= java.net.URLEncoder.encode(smenu.getUsermenuLink(),"utf-8");
+							} catch (UnsupportedEncodingException e) {
+								// TODO Auto-generated catch block
+								e.printStackTrace();
+							}
+							 mainviewbtn.setUrl(this.snsURI.replaceAll("user_uri", url));
 							 but[m]=mainviewbtn;
 						 }else{
 							 CommonButton btn = new CommonButton();
@@ -109,7 +119,15 @@ public class UserMenuDaoImpl extends BaseDaoImpl implements IUserMenuDao {
 					 ViewButton mainviewbtn = new ViewButton();  
 					 mainviewbtn.setName(tmenu.getUsermenuName());  
 					 mainviewbtn.setType("view");  
-					 mainviewbtn.setUrl(tmenu.getUsermenuLink());
+					 String url = "";
+					 try {
+						 url= java.net.URLEncoder.encode(tmenu.getUsermenuLink(),"utf-8");
+					} catch (UnsupportedEncodingException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+					 mainviewbtn.setUrl(this.snsURI.replaceAll("user_uri", url));
+					 /*mainviewbtn.setUrl(tmenu.getUsermenuLink());*/
 					 tbut[tmenu.getUsermenuNo()-1] = mainviewbtn;
 				 }
 				 dd++;

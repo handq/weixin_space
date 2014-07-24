@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -11,7 +13,7 @@
     <link href="/bootstrapDemo/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
     <script src="/bootstrapDemo/js/jquery.js"></script>
  	<script src="/bootstrapDemo/bootstrap/js/bootstrap.min.js"></script>
- 	<script src="/bootTest/js/my.js"></script>
+ 	<!-- <script src="/bootTest/js/my.js"></script> -->
     <style type="text/css">
     	.bottom
 	{
