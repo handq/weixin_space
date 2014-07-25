@@ -25,7 +25,7 @@ import com.csst.services.pojo.ViewButton;
 
 public class UserMenuDaoImpl extends BaseDaoImpl implements IUserMenuDao {
 	
-	public  static  String snsURI="https://open.weixin.qq.com/connect/oauth2/authorize?appid="+TokenThread.appid+"&redirect_uri=user_uri&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect";
+	public  static  String snsURI="https://open.weixin.qq.com/connect/oauth2/authorize?appid=user_openid&redirect_uri=user_uri&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect";
 
 	@Override
 	public TUserMenu saveUserMenu(TUserMenu usermenu) {
@@ -46,6 +46,7 @@ public class UserMenuDaoImpl extends BaseDaoImpl implements IUserMenuDao {
 
 	@Override
 	public boolean updateUserMenu() {
+		this.snsURI = this.snsURI.replaceAll("user_openid", TokenThread.appid);
 		boolean updateFlag=false;
 		//获取所有的菜单
 		List<TUserMenu> topMenuList = new ArrayList<TUserMenu>();
@@ -134,6 +135,7 @@ public class UserMenuDaoImpl extends BaseDaoImpl implements IUserMenuDao {
 			}
 			menu.setButton(tbut);
 		}
+		System.out.println(TokenThread.appid);
 		//获取accessToken
         String at = TokenThread.accessToken.getToken(); 
        //菜单创建

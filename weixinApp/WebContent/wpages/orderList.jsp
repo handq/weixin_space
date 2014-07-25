@@ -48,7 +48,7 @@
 <div class="jumbotron" style="padding: 8px;font-size: 14px"> 
       <div class="panel panel-default"  >
         <div class="panel-body" style="line-height: 18px;">
-         	您目前一共有2个预约订单。
+         	${userinfo.nickname },您目前一共有2个预约订单。
         </div>
       </div>
       <div class="panel panel-default">

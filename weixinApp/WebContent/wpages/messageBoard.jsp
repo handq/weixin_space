@@ -53,7 +53,7 @@
 			</div>
 			<div style="background-image: url('/images/bak_message.jpg');">
 				<div style="margin-left: 40px;margin-right: 20px;">
-					<textarea rows="2" cols="1" class="form-control" id="inputRemark" placeholder="请输入留言" style="margin-bottom: 10px;"></textarea> 
+					<textarea rows="2" cols="1" class="form-control" id="inputRemark" placeholder="请输入留言" style="margin-bottom: 10px;">${userinfo.nickname }</textarea> 
 					<button type="button" class="btn btn-success" style="width: 100%">提交</button>
 				</div>
 			</div>

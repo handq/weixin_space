@@ -58,9 +58,9 @@
      <div class="row" style="margin: 0px;">
         <div class="col-sm-4" style="width: 100%;padding: 0px;">
           <div class="list-group" >
-            <li  class="list-group-item"> <img alt="" src="/images/png/819.png"><a>010-826491</a>
+            <li  class="list-group-item"> <img alt="" src="/images/png/819.png"><a>${company.CFax}</a>
 			</li>
-            <a href="/bootTest/004.html" class="list-group-item"><img alt="" src="/images/png/564.png">北京市东燕郊经济开发区斯普兰路南600米燕郊神态度假酒店
+            <a href="/bootTest/004.html" class="list-group-item"><img alt="" src="/images/png/564.png">${company.CLocation}
             	<dl class="pull-right">
 				  <dt ><img alt="" src="/images/png/993.png"></dt>
 				</dl> 

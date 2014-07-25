@@ -17,6 +17,7 @@
   </head>
   
 <body >
+<img src="/images/004.jpg" alt="..." width="100%"  style="height: 120px">
 	<!-- 这里是头部的轮播插件 end-->
 	<div class="container" style="margin: 5px; padding: 5px;" >
 		<div class="panel panel-default">

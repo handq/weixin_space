@@ -122,10 +122,10 @@
 			  </table>
 			 <h4 style="color: black;border-bottom: 1px black solid;">联系我们</h4>
 			 <div>
-			 <p>名称：北京实创餐饮管理有限公司</p>
-			 <p>联系电话：010-391341</p>
-			 <p>邮箱：hx-jfkl@hx.mail.com</p>
-			 <p>地址：北京市西直门内大街118号</p>
+			 <p>名称：${company.CName}</p>
+			 <p>联系电话：${company.CFax}</p>
+			 <p>邮箱：${company.CEmail}</p>
+			 <p>地址：${company.CAddress}</p>
 			
 			 </div>
 	     	 <h4 style="color: black;border-bottom: 1px black solid;"> 版权信息</h4>
@@ -143,7 +143,7 @@
 		<span class="style4" style="color: red;height: 24px;padding-top: 5px;">
 		<button type="button" class="btn btn-default" style="width: 30%" onclick="location.href='/bootTest/002.html'">在线预约</button>
 	  	<button type="button" class="btn btn-default" style="width: 30%" onclick="location.href='/bootTest/005.html'">查看预约</button>
-	  	<button type="button" class="btn btn-default" style="width: 30%" onclick="location.href='/bootTest/004.html'">关于我们</button>
+	  	<button type="button" class="btn btn-default" style="width: 30%" onclick="location.href='http://www.hdq.nat123.net/company/getAboutus.action'">关于我们</button>
 		</span><br />
 	</div>
 	<!-- 这里是固定在底部的导航条 end-->
